@@ -187,15 +187,11 @@ def result(request):
         if emptyr is not None:
             for i in emptyr:
                 empty.append(i)
-            #print('empty rooms: ', empty)
             size = len(emptyr)
             for i in range(size):
                 extras = extras - rooms_capacity[ur[i]]
-            #print('seats unoccupied in selected rooms: ', extras)
         else:
             p=0
-            #print('empty rooms: ', emptyr)
-            #print('empty seats: ', extras)
     room_id_sorted_new = list()
     utilised_rooms = list()
     utilised_rooms_capacity = list()
@@ -226,15 +222,9 @@ def result(request):
                         room_id_sorted_new.append(room_id_sorted[i])
         else:
             room_id_sorted_new = room_id_sorted
-        #print('utilised rooms: ', utilised_rooms)
-        #print('utilised room ids: ', room_id_sorted_new)
-
-        for i in utilised_rooms:
+       for i in utilised_rooms:
             utilised_rooms_capacity.append(rooms_capacity[i])
-        #print('capacity of utilised rooms: ', utilised_rooms_capacity)
-
         length = len(utilised_rooms_capacity)
-
         final_utilised_capacity = utilised_rooms_capacity.copy()
         room_sections_capacity = [[] for i in range(len(utilised_rooms))]
         for k in range(len(utilised_rooms)):
@@ -242,7 +232,6 @@ def result(request):
                 j = sections_capacity[i] // len(utilised_rooms)
                 if final_utilised_capacity[k] >= j:
                     room_sections_capacity[k].append(j)
-                    # sections_capacity[i] -= final_utilised_capacity[k]
                     final_utilised_capacity[k] -= j
                 else:
                     if final_utilised_capacity[k] >= 0:
@@ -277,10 +266,6 @@ def result(request):
                             room_empty_seats[k] -= room_empty_seats[k]
                     if section_capacity_notfilled[j] is 0:
                         break
-        #print('capacity of all sections in each room: ', room_sections_capacity)
-        #print('section capacity not filled: ', section_capacity_notfilled)
-        #print('empty seats in each room: ', room_empty_seats)
-        # room_sections_capacity = list()
         room_section_rollnos = [[] for i in range(len(utilised_rooms))]
         for i in range(0, len(utilised_rooms)):
             for j in range(0, len(sections_capacity)):
