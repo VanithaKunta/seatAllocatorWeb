@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 22px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+}
+
+.dropdown-content {
+    font-size: 22px;
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 800px;
+    height: 70px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+    .loginbox input{
+        width:100%;
+        margin-bottom:0px;
+        color:white;
+    }
+    .loginbox input[type="text"],input[type="password"], input[type="number"]
+    {
+        border:none;
+        margin-left:20px;
+        margin-right:20px;
+        border-bottom:1px solid #000;
+        background:transparent;
+        outline:none;
+        height:20px;
+        width:100%;
+        color:black;
+        font-size:20px;
+    }
+    .loginbox input[type="submit"]
+    {
+        border:none;
+        outline:none;
+        height:28px;
+        width:100px;
+        background:#fb2525;
+        color:#fff;
+        font-size:24px;
+        margin-left:40%;
+        border-radius:20px;
+    }
+    .loginbox input[type="submit"]:hover
+    {
+        cursor:pointer;
+        background:#ff66ff;
+        color:#000;
+    }
+    .loginbox p:hover{
+    background:lightgray;
+    }
+    h1{
+        padding-top:20px;
+        font-size:26px;
+        color:#ff5252 ;
+    }
+    .loginbox{
+        color:#000;
+        margin-top:50px;
+        margin-left:400px;
+        margin-right:300px;
+
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>input_form</title>
+</head>
+<body style="background-image:url(mp.jpg)">
+<center><h1>Hello!</h1></center>
+<div class="loginbox">
+   <form method="post">
+       {% csrf_token %}
+   <div class="dropdown">
+    <button class="dropbtn">Enter number of rooms.
+    </button>
+       {{form.noOfRooms}}<br><br>
+  </div><br>
+   <br><br>
+   <div class="dropdown">
+    <button class="dropbtn">Enter room 1 details.
+    </button>
+       {{form.room1}}<br><br>
+    <div class="dropdown-content">
+      <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 2 details.
+    </button>
+       {{form.room2}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 3 details.
+    </button>
+       {{form.room3}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 4 details.
+    </button>
+       {{form.room4}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id. </a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 5 details.
+    </button>
+       {{form.room5}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 6 details.
+    </button>
+       {{form.room6}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 7 details.
+    </button>
+       {{form.room7}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 8 details.
+    </button>
+       {{form.room8}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 9 details.
+    </button>
+       {{form.room9}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+       <div class="dropdown">
+    <button class="dropbtn">Enter room 10 details.
+    </button>
+       {{form.room10}}<br><br>
+    <div class="dropdown-content">
+        <a>Enter rows, columns, room id.</a>
+        <br><br>
+    </div>
+  </div><br>
+   <br><br>
+   <input type="submit" name="" value="Submit">
+   </form>
+</div>
+</body>
+</html>

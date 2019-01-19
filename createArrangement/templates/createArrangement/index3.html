@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+    .loginbox p{
+        margin:0;
+        padding-left:20px;
+        font-weight:bold;
+        font-size:20px;
+        font-family:sans-serif;
+    }
+    .loginbox input{
+        width:100%;
+        margin-bottom:0px;
+        color:white;
+    }
+    .loginbox input[type="text"],input[type="password"], input[type="number"]
+    {
+        border:none;
+        margin-left:20px;
+        margin-right:20px;
+        border-bottom:1px solid #000;
+        background:transparent;
+        outline:none;
+        height:20px;
+        width:100%;
+        color:black;
+        font-size:20px;
+    }
+    .loginbox input[type="submit"]
+    {
+        border:none;
+        outline:none;
+        height:28px;
+        width:100px;
+        background:#fb2525;
+        color:#fff;
+        font-size:24px;
+        margin-left:40%;
+        border-radius:20px;
+    }
+    .loginbox input[type="submit"]:hover
+    {
+        cursor:pointer;
+        background:#ff66ff;
+        color:#000;
+    }
+    .loginbox a{
+        text-decoration:none;
+        font-size:20px;
+        line-height:14px;
+        color:darkgrey;
+        padding-left:20px;
+        font-family:sans-serif;
+    }
+    .loginbox a:hover{
+        color:#ff4500;
+    }
+    h1{
+        padding-top:20px;
+        font-size:26px;
+        color:#ff5252 ;
+    }
+    .loginbox{
+        color:#000;
+        margin-top:50px;
+        margin-left:400px;
+        margin-right:300px;
+
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>input_form</title>
+</head>
+<body style="background-image:url(mp.jpg)">
+<center><h1>Hello!</h1></center>
+<div class="loginbox">
+   <form method="post">
+       {% csrf_token %}
+   <p>Any numbers to be added?(y/n)</p><br>
+   {{form3.addNum}}
+   <br>
+   <br>
+   <p>To how many sections numbers should be added?</p><br>
+   {{form3.addNumRoll}}
+   <br>
+   <br>
+   <p>Enter section in which number should be added, how many numbers should be added and what numbers should be added</p><br>
+   {{form3.delNum}}
+   <br>
+   <br>
+
+   <input type="submit" name="" value="Submit">
+   </form>
+</div>
+</body>
+</html>
